@@ -1,0 +1,35 @@
+
+.divContainerSearch {
+    margin: 0px;
+    padding: 0px;
+}
+
+h1 {
+    color: #023e8a;
+    
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 20px;
+}
+
+.header i {
+    cursor: pointer;
+    color: #0077b6;
+    font-size: 40px;
+}
+.header i:hover {
+    color: #03045e;
+}
+
+.item {
+    width: 100%;
+}
+
+.founded {
+    display: flex;
+    flex-wrap: wrap;
+}

@@ -1,0 +1,128 @@
+
+<div class="contenedor">
+    <div class="userInfo">
+        <h1 class="text text-info">Mi Perfil</h1>
+        <hr>
+
+        <div class="info">
+            <div class="header">
+                <h2>Informacion:</h2>
+                <i class="bi bi-pencil-fill edit"
+                    (click)="editProfile()"
+                ></i>
+            </div>
+            <h6> <span><i class="bi bi-check2 select"></i></span> <span class="subtitle">   Nombre:  </span>  <span>{{ userAuthenticated.name }}</span> </h6>
+            <h6> <span><i class="bi bi-check2 select"></i></span> <span class="subtitle">   Correo:  </span>  <span>{{ userAuthenticated.email }}</span> </h6>
+            <h6> <span><i class="bi bi-check2 select"></i></span> <span class="subtitle">   Celular:  </span>  <span>{{ userAuthenticated.mobile }}</span> </h6>
+            <h6> <span><i class="bi bi-check2 select"></i></span> <span class="subtitle">   Role:  </span>  <span>{{ userAuthenticated.role }}</span> </h6>
+            
+        </div>
+    
+    </div>
+
+    <div class="favorites info">
+        <h2>Favoritos:</h2>
+        
+    </div>
+
+    <!-- Update Product -->
+    <div class="update info" *ngIf=" userAuthenticated.role === 'ADMIN_ROLE' " >
+        <h2 *ngIf="!wantToUpdate">Actualizar</h2>
+        
+        
+        <form [formGroup]="selectForm" (ngSubmit)="goToUpdate()" >
+            <h6 *ngIf="!wantToUpdate" >Seleccione Producto</h6>
+            <select name="" id="" 
+                    class="form-control"
+                    formControlName="selectedProduc"
+                    *ngIf="!wantToUpdate"
+            >
+                <option value="">-- Seleccione Producto a Actualizar --</option>
+                <option *ngFor="let product of products"
+                        [value]=" product.id"
+                            
+                >{{ product.name | titlecase }}</option>
+            </select>
+            <app-update-product  
+                *ngIf="wantToUpdate" 
+                [id]="idProduct" 
+                (updatedData)="getBodyFromChild($event)"
+                [wantToUpdate]="wantToUpdate"
+                (closeForm)="closeForm()"
+                [nameProductToUpdate]="nameProduct"
+            ></app-update-product>
+
+            <button type="submit"
+                    class="btn btn-primary"
+                    [disabled]="selectForm.invalid"
+            > {{ (wantToUpdate) ? 'Ocultar' : 'Mostrar' }} Formulario </button>
+
+        </form>
+                
+    </div>
+
+    <!-- Delete Product -->
+    <div class="delete"
+         *ngIf=" userAuthenticated.role === 'ADMIN_ROLE' "
+    >
+
+        <div class="info"
+             
+        >
+            <form [formGroup]="myform" (ngSubmit)="deleteProduct()">
+                <h4 class="h2Delete">Borrar Producto</h4>
+                <select name="" id="" 
+                    class="form-control"
+                    formControlName="product"
+                >
+                    <option value="">-- Seleccione Producto a Eliminar --</option>
+                    <option *ngFor="let product of products"
+                            [value]=" product.id"
+                    >{{ product.name | titlecase }}</option>
+                </select>
+                <span class="text text-info" 
+                      *ngIf="validDeletion"
+                >
+                    Borrado correctamente
+                </span>
+
+                <button class="btn btn-info btn-danger"
+                        [disabled]="myform.invalid"
+                        type="submit"
+                >
+                    Borrar
+                </button>
+
+            </form>
+        </div>
+
+    </div>
+
+    <!-- Add Category -->
+    <div class="update info" 
+         *ngIf=" userAuthenticated.role === 'ADMIN_ROLE' " 
+    >
+        <h2>Agregar Categoria</h2>
+        <app-add-category 
+            *ngIf="showHideFormAddCate"
+            (bodyForm)="addCate($event)"
+        ></app-add-category>
+        <button type="button"
+                class="btn btn-primary"
+                (click)="setFormCate()"
+        > Mostrar/Ocultar Formulario </button>
+    </div>
+
+    <!-- Add Product -->
+    <div class="divAddProd"
+         *ngIf=" userAuthenticated.role === 'ADMIN_ROLE' "
+         
+    >
+        <button class="btn btn-primary prod"
+                (click)="addProd()"
+        >Agregar Producto</button>
+        <span class="text text-info">Solo Admin puede agregar productos</span>
+    </div>
+
+
+</div>

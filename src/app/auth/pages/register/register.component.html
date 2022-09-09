@@ -1,0 +1,69 @@
+
+
+
+
+
+    
+<form autocomplete="off" [formGroup]="myform" (ngSubmit)="register()">
+
+    <div class="enun">
+        <h2 >Register</h2>
+    </div>
+    
+    <!-- Name field -->
+    <h5>Name</h5>
+    <input type="name"
+           formControlName="name"
+           placeholder="Tu Nombre"
+    >
+    <span class="form-text text-danger"
+          *ngIf="validField('name')"
+    >debe establecer un nombre</span>
+
+    <!-- Celular field -->
+    <h5>Celular</h5>
+    <input type="tel"
+           formControlName="mobile"
+           placeholder="Tu Celular"
+    >
+    <span class="form-text text-danger"
+          *ngIf="validField('mobile')"
+    >formato incorrecto de celular</span>
+
+    <!-- Email field -->
+    <h5>Email</h5>
+    <input type="email"
+           formControlName="email"
+           placeholder="Tu correo"
+    >
+    <span class="form-text text-danger"
+          *ngIf="validField('email')"
+    >correo incorrecto</span>
+
+    <!-- Password field -->
+    <h5>Password</h5>
+    <input type="password"
+           formControlName="password"
+           placeholder="Contrasena"
+    >
+    <span class="form-text text-danger"
+          *ngIf="validField('password')"
+    >debe tener al menos 6 caracteres</span>
+
+    <button class="btn btn-primary"
+            [disabled]="myform.invalid"
+            type="submit"
+    >
+        Registrarme
+    </button>
+
+    <div class="redirection">
+        <span>Ya tienes cuenta ?</span>
+        <a [routerLink]="[ '/auth/login' ]">Ir a Login</a>            
+    </div>
+
+</form>
+
+<!-- <h4>Invalid</h4>
+<pre>{{ myform.invalid }}</pre> -->
+    

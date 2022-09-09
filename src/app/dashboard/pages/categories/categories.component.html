@@ -1,0 +1,61 @@
+
+<div class="divCate">
+    
+    <div class="divCategory">
+        <h1>Categorias</h1>
+    </div>
+
+    <div class="divSearch">
+        <form  (ngSubmit)="searchCate()" [formGroup]="myform" autocomplete="off" >
+            <div class="divInputIcon">
+                <input type="text"
+                       formControlName="terminus"
+                       placeholder="Buscar Categoria..."
+                >
+                <i class="bi bi-search icon" (click)="searchCate()" ></i>
+            </div>
+            <span class="text text-danger"
+                  errDirectMsg
+                  [msg]="msg"
+            >   
+            </span>
+        </form>
+
+        <div class="divCart">
+            <i class="bi bi-cart-dash-fill cart"
+                (click)="goToCart()"
+            ></i>
+        </div>
+    </div>
+
+    <!-- Categories founded -->
+    <div class="divFoundCategories" *ngIf="showH3">
+        <h3 class="mb-2" >Categorias Encontradas: </h3>
+        <div class="divUl">
+            <ul>
+                <app-single-category *ngFor="let cate of foundCate" [cate]="cate" (id)="getProdsBelongCate($event)" ></app-single-category>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Single Category Component Children -->
+    <div class="carouselCate" >
+        <span> Todas  <i class="bi bi-arrow-right"></i></span>
+        <div class="divUl">
+            <ul>
+                <app-single-category *ngFor="let cate of allCategories" [cate]="cate" (id)="getProdsBelongCate($event)" ></app-single-category>
+            </ul>
+        </div>
+    </div>
+
+    <!-- <button mat-button (click)="openDialog()">Launch dialog</button> -->
+    <!-- <button mat-raised-button (click)="openDialog('3000ms', '1500ms')">Open dialog slowly</button> -->
+
+    <div class="mt-4 prodsBelongCate">
+        <div class="divSingle" *ngFor="let prod of prodsBelongCate">
+            <app-single-product [product]="prod" ></app-single-product>
+        </div>
+
+    </div>
+
+</div>

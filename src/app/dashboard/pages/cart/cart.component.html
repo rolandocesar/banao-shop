@@ -1,0 +1,40 @@
+
+<div class="iconBack">
+    <i class="bi bi-arrow-left" (click)="comeBack()"></i>
+</div>
+
+<div class="divCart">
+
+    <h1>Mis Compras</h1>
+
+    <div class="alert alert-danger m-2"
+         *ngIf="!isThereCartProducts"
+    >
+        <span 
+            class="text-info text-danger"
+        >
+            Debe de Agregar algo a su canasta !!!
+        </span>
+    </div>
+
+    <ul *ngIf="isThereCartProducts">
+        <li *ngFor="let item of cartProducts">
+            <div class="divSingleProd">
+                <img [src]="item.img1" alt="">
+                <div class="namePrice">
+                    <h6>{{ item.name }}  </h6>
+                    <h6>{{ item.price }}  </h6>
+                </div>
+            </div>
+            <div class="divButton">
+                <button (click)="unMount($event)" [id]="item.id" >Desmontar</button>
+            </div>
+        </li>
+    </ul>
+
+    <div class="divButtonBuy" *ngIf="isThereCartProducts">
+        <button (click)="saleRequest()" >Solicitar Compra</button>
+    </div>
+
+
+</div>

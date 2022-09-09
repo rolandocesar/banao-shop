@@ -1,0 +1,85 @@
+
+<div class="iconBack">
+    <i class="bi bi-arrow-left" (click)="comeBack()"></i>
+</div>
+
+<div class="contenedor  animate__animated animate__fadeIn animate__faster">
+    <h1 class="text text-info">Editar/Actualizar mi Perfil</h1>
+    <hr>
+
+    <form [formGroup]="myform" 
+            (ngSubmit)="update()"
+    >
+
+        <!-- Name Field -->
+        <div class="field">
+            <label>Nombre</label>
+            <input type="text"
+                   formControlName="name"
+                   class="form-control"
+                   placeholder="Tu Nombre"
+                   
+            >
+            <span *ngIf="validField('name')"
+                    class="text-info text-danger"
+            >
+                Nombre Incorrecto
+            </span>
+        </div>
+
+        <!-- Mobile Field -->
+        <div class="field">
+            <label>Celular</label>
+            <input type="tel"
+                   formControlName="mobile"
+                   class="form-control"
+                    placeholder="Celular"
+                   
+            >
+            <span *ngIf="validField('mobile')"
+                    class="text-info text-danger"
+            >
+                Formato Celular Incorrecto
+            </span>
+        </div>
+
+        <!-- Password Field -->
+        <div class="field">
+            <label>Contrasena</label>
+            <input type="password"
+                   formControlName="password"
+                   class="form-control"
+                   placeholder="Contrasena"
+                   
+            >
+            <span *ngIf="validField('password')"
+                    class="text-info text-danger"
+            >
+               Contrasena debe tener al menos 6 caracteres
+            </span>
+        </div>
+
+        
+
+        <!-- Name Field -->
+        <!-- <input type="text"
+               formControlName="name"
+               
+        >
+        <span *ngIf="validField('name')">
+            Nombre Incorrecto
+        </span> -->
+
+        <div class="divBtn">
+            <button class="btn btn-primary"
+                    type="submit"
+            >
+                Enviar
+            </button>
+        </div>
+
+    </form>
+
+</div>
+
+<!-- <button type="button" (click)="test()" > TEST</button> -->

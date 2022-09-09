@@ -1,0 +1,27 @@
+
+
+/* Ul Carousel Cate */
+
+li {
+    border: 1px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+    list-style: none;
+    padding: 3px;
+    height: 34px;
+    width: 120px;
+}
+
+li:hover, li:active {
+    border: none;
+    background-color: #8a5a44;
+    color: white;
+}
+
+li small {
+    font-size: 16px;
+}

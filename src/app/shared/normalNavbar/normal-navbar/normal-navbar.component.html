@@ -1,0 +1,21 @@
+
+<nav class="divNav">
+
+    <ul class="animate__animated animate__fadeIn animate__faster">
+        
+        <div class="link"
+             *ngFor="let item of menuItem"
+             [routerLink]="[item.route]"
+             routerLinkActive="active"
+        >
+    
+            <li 
+                
+            >
+                {{ item.text }}
+            </li>
+    
+        </div>
+    </ul>
+
+</nav>

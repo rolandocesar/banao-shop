@@ -1,0 +1,53 @@
+
+
+/* .container {
+    background-color: transparent;
+    opacity: 0.5;
+    height: auto;
+    width: 350px;
+} */
+
+h2 {
+    color: #0077b6;
+}
+
+h5 {
+    margin: 8px 0px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    width: 100%;
+}
+
+.enun {
+    display: flex;
+    justify-content: center;
+}
+
+input {
+    color: black;
+    margin-bottom: 7px;
+}
+
+.btn {
+    font-weight: bolder;
+    font-size: 17px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    letter-spacing: 3px;
+}
+
+.redirection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+
+

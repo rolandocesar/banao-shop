@@ -1,0 +1,104 @@
+
+<div class="contenedorUpdate  animate__animated animate__fadeIn">
+       <form [formGroup]="updateForm" 
+              #updatedData (ngSubmit)="updateProd()" 
+              autocomplete="off"
+              *ngIf="showForm"
+       >
+              <div class="header"
+                     *ngIf="wantToUpdate"
+              >
+              <div class="h1Sub">
+                     <!-- <h1 class="text text-info">Agregar Producto</h1> -->
+                     <h4>Actualizar <span>{{ nameProductToUpdate | titlecase }}</span></h4>
+              </div>
+              <div class="uploadImgIcon">
+                     <i class="bi bi-camera-fill"
+                     (click)="clickIcon()"
+                     ></i>
+                     <input type="file"
+                            #inputFile
+                            multiple
+                            (change)="addPhotos($event)"
+                            [ngStyle]="{'display': 'none'}"
+                     >
+              </div>
+       
+              </div>
+              <!-- Name field -->
+              <label>Nombre</label>
+              <input type="name"
+                     formControlName="name"
+                     placeholder="Nombre"
+              >
+              <!-- <span class="form-text text-danger"
+                    *ngIf="validField('name')"
+              >debe establecer un nombre</span> -->
+           
+              <!-- Price field -->
+              <label>Precio</label>
+              <input type="text"
+                     formControlName="price"
+                     placeholder="Precio"
+              >
+              <!-- <span class="form-text text-danger"
+                    *ngIf="validField('price')"
+              >debe establecer un precio</span> -->
+           
+              <!-- Desc field -->
+              <label>Descripcion</label>
+              <textarea type="text"
+                  rows="3"
+                  formControlName="desc"
+                  placeholder="Descripcion"
+              ></textarea>
+           
+              <!-- Amount field -->
+              <label>Cantidad</label>
+              <input type="number"
+                     formControlName="amount"
+                     placeholder="Existen"
+              >
+
+              <!-- Message Error -->
+              <span class="text text-danger"
+                     *ngIf="message"
+              >
+                     Debe rellenar algun campo antes de actualizar
+              </span>
+           
+              <button class="btn btn-primary prod"
+                      [disabled]="updateForm.invalid"
+              >Actualizar</button>
+       </form>
+
+       <div class="divUpload"
+              *ngIf="!showForm"
+       >
+              <!-- Amount of img to upload -->
+              <span class="text text-info"
+                     *ngIf="amountImg > 0"
+              >Tienes {{ amountImg }} imagen/es para subir </span>
+
+              <div class="divBtn">
+                     <button type="button"
+                             (click)="uploadImg()"
+                             class="btn btn-primary"
+                     >Subir IMG</button>
+       
+                     <button type="button"
+                             (click)="cancel()"
+                             class="btn btn-danger"
+                             [ngStyle]="{'margin-left': '20px' }"
+                     >Cancelar</button> 
+              </div>
+
+       </div>
+
+   </div>
+
+
+
+
+
+<!-- [disabled]="myform.invalid" -->

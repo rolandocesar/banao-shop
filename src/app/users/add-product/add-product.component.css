@@ -1,0 +1,76 @@
+
+/* Icon Back */
+.iconBack {
+    margin: 15px 0px 0px 10px;
+    /* width: fit-content; */
+}
+.iconBack i {
+    cursor: pointer;
+    color: #03045e;
+    font-size: 25px;
+}
+
+/* main */
+.contenedor {
+    margin-top: 15px;
+    padding-left: 20px;
+    padding-right: 10px;
+}
+/* @media (max-width: 530px) { 
+    .contenedor {
+        padding-left: 20px;
+        padding-right: 10px;
+    }
+} */
+
+h2 {
+    color: #0077b6;
+}
+
+h5 {
+    margin: 8px 0px;
+}
+
+form {
+    width: 75%;
+}
+@media (max-width: 768px) { 
+    form {
+        width: 100%;
+    }
+}
+
+.allFieldsForms {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px 20px 20px;
+    /* width: 75%; */
+}
+
+@media (max-width: 530px) { 
+    .allFieldsForms {
+        width: 100%;
+    }
+}
+
+.allFieldsForms {
+    padding-left: 15px;
+}
+
+.enun {
+    display: flex;
+    justify-content: center;
+}
+
+input {
+    color: black;
+    margin-bottom: 7px;
+}
+
+.btn {
+    font-weight: bolder;
+    font-size: 17px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    letter-spacing: 3px;
+}

@@ -1,0 +1,74 @@
+
+<div class="iconBack">
+    <i class="bi bi-arrow-left" (click)="comeBack()"></i>
+</div>
+
+<div class="contenedor">
+    
+
+    <form [formGroup]="myform" (ngSubmit)="addProduct()" autocomplete="off">
+
+        <h1 class="text text-info">Agregar Producto</h1>
+
+        <div class="allFieldsForms">
+
+            <!-- Name field -->
+            <h5>Nombre</h5>
+            <input type="name"
+                   formControlName="name"
+                   placeholder="Nombre"
+            >
+            <span class="form-text text-danger"
+                  *ngIf="validField('name')"
+            >debe establecer un nombre</span>
+    
+            <!-- Price field -->
+            <h5>Precio</h5>
+            <input type="text"
+                   formControlName="price"
+                   placeholder="Precio"
+            >
+            <span class="form-text text-danger"
+                  *ngIf="validField('price')"
+            >debe establecer un precio</span>
+    
+            <!-- Category field -->
+            <h5>Categoria</h5>
+            <select name="" id="" 
+                    class="form-control"
+                    formControlName="category"
+            >
+                <option value="">-- Select Category --</option>
+                <option *ngFor="let category of categories"
+                        [value]=" category.id"
+                >{{ category.name | titlecase }}</option>
+            </select>
+    
+            <!-- Desc field -->
+            <h5>Descripcion</h5>
+            <textarea type="text"
+                rows="3"
+                formControlName="desc"
+                placeholder="Descripcion"
+            ></textarea>
+    
+            <!-- Amount field -->
+            <h5>Cantidad</h5>
+            <input type="number"
+                   formControlName="amount"
+                   placeholder="Existen"
+            >
+    
+    
+            <button class="btn btn-primary prod"
+                    [disabled]="myform.invalid"
+            >Agregar Producto</button>
+
+        </div>
+
+    </form>
+
+
+</div>
+
+<!-- *[ngIf]="userAuthenticated.role === 'ADMIN_ROLE' " -->

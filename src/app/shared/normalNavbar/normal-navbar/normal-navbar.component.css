@@ -1,0 +1,28 @@
+
+
+.divNav {
+    background-color: #00b4d8;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0px;
+    padding: 0px;
+    width: 100vw;
+}
+.link {
+    margin-right: 5px;
+}
+.link:hover,
+.link:active {
+    background-color: rgb(16, 164, 150);
+}
+ul li {
+    cursor: pointer;
+    color: black;
+    font-size: 16px;
+    list-style: none;
+    padding: 8px;
+}

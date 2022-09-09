@@ -1,0 +1,60 @@
+
+.iconBack {
+    margin: 15px 0px 0px 10px;
+    /* width: fit-content; */
+}
+.iconBack i {
+    cursor: pointer;
+    color: #03045e;
+    font-size: 25px;
+}
+
+h1 {
+    color: #ff7b00;
+    margin: 0px 0px 20px 15px;
+}
+
+/* Form  */
+
+h2 {
+    color: #0077b6;
+}
+
+h5 {
+    margin: 8px 0px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px 20px 20px 20px;
+    width: 100%;
+}
+
+.infoShipping {
+    margin: 10px 0px 10px 10px;
+    width: 90vw;
+    /* padding: 15px; */
+}
+.infoShipping p {
+    text-align: center;
+}
+
+.enun {
+    display: flex;
+    justify-content: center;
+}
+
+input {
+    color: black;
+    margin-bottom: 7px;
+}
+
+.btn {
+    font-weight: bolder;
+    font-size: 17px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    letter-spacing: 3px;
+}

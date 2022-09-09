@@ -1,0 +1,36 @@
+
+<nav class="divNav">
+
+    <div class="menuIcon">
+        <i  class="bi bi-list"
+            (click)="setOpenClose()"
+            *ngIf="!isOpen"
+        ></i>
+        <i class="bi bi-x-circle"
+            (click)="setOpenClose()"
+            *ngIf="isOpen"
+        ></i>
+    </div>
+    <ul 
+        
+        [ngClass]=" (isOpen) ? 'active' : '' "
+    >
+        <div class="link"
+             *ngFor="let item of menuItem"
+             [routerLink]="[item.route]"
+             routerLinkActive="active"
+             (click)="closeMenuNavbar()"
+        >
+    
+            <li 
+                
+            >
+                {{ item.text }}
+            </li>
+    
+        </div>
+    </ul>
+
+</nav>
+<!-- class="animate__animated animate__fadeIn animate__faster " -->
+<!-- *ngIf="isOpen" -->

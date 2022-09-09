@@ -1,0 +1,107 @@
+
+
+.iconBack {
+    margin: 15px 0px 0px 10px;
+    /* width: fit-content; */
+}
+.iconBack i {
+    cursor: pointer;
+    color: #03045e;
+    font-size: 25px;
+}
+.divCart {
+    margin: 0px;
+    padding: 0px;
+}
+
+h1 {
+    color: #ff7b00;
+    margin: 10px 0px 25px 15px;
+}
+h6 {
+    font-size: 14px;
+}
+
+ul {
+    margin: 0px;
+    padding-left: 20px;
+}
+/* ffdd00 */
+li {
+    background-color: #ffea00;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    width: 90vw;
+}
+@media (min-width: 820px) { 
+    li, .infoShipping {
+        width: 750px;
+    }
+    h6 {
+        font-size: 20px;
+    }
+    
+}
+img {
+    border-radius: 100%;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 15px;
+    width: 100px;
+}
+@media (min-width: 768px) { 
+    img {
+        margin-right: 40px;
+    }
+}
+
+.divSingleProd {
+    display: flex;
+}
+
+.namePrice {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.divButton {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+.divButton button {
+    border: none;
+    border-radius: 5px;
+    background-color: #ff8800;
+    cursor: pointer;
+    height: 40px;
+    width: 90px;
+    margin-right: 10px;
+}
+.divButton button:hover {
+    background-color: #ff7b00;
+    /* color: grey; */
+}
+
+
+.divButtonBuy {
+    display: flex;
+    justify-content: center;
+    margin-left: 20px;
+    padding-bottom: 40px;
+}
+.divButtonBuy button{
+    border: none;
+    border-radius: 5px;
+    background-color: #ff8800;
+    cursor: pointer;
+    padding: 4px;
+    width: 300px;
+}
+
+.divButtonBuy button:hover {
+    background-color: #ff7b00;
+}

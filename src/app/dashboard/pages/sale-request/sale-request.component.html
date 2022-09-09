@@ -1,0 +1,61 @@
+
+<div class="iconBack">
+    <i class="bi bi-arrow-left" (click)="comeBack()"></i>
+</div>
+
+<form [formGroup]="myform" autocomplete="off" (ngSubmit)="sendRequest()" >
+      <h1>Solicitud de Compra</h1>
+
+      <div class="infoShipping">
+            <p> <span>NOTA: </span> !!! Los envios se hacen en menos de 24 horas al menos si no es un municipio lejos !!! </p>
+      </div>
+      
+      <!-- Name field -->
+      <h5>Nombre</h5>
+      <input type="text"
+            formControlName="name"
+            placeholder="Tu Nombre"
+      >
+      <span class="form-text text-danger"
+            *ngIf="validField('name')"
+      >debe establecer un nombre</span>
+
+      <h5>Apellidos</h5>
+      <input type="text"
+            formControlName="lastname"
+            placeholder="Tus Apellidos"
+      >
+      <span class="form-text text-danger"
+            *ngIf="validField('lastname')"
+      >debe establecerlos bien, Ejem: Hernandez Perez </span>
+
+      <!-- Celular field -->
+      <h5>Celular</h5>
+      <input type="tel"
+            formControlName="mobile"
+            placeholder="Tu Celular"
+      >
+      <span class="form-text text-danger"
+            *ngIf="validField('mobile')"
+      >formato incorrecto de celular</span>
+
+
+      <!-- Address field -->
+      <h5>Direccion de Recibo</h5>
+      <textarea rows="2"
+              class="mb-2"
+              formControlName="address"
+           
+      ></textarea>
+      <span class="form-text text-danger"
+            *ngIf="validField('address')"
+      >debes de enviarnos la direccion de recibo</span>
+
+      <button class="btn btn-primary"
+              [disabled]="myform.invalid"
+              type="submit"
+      >
+            Enviar Compra
+      </button>
+
+</form>

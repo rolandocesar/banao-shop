@@ -1,0 +1,46 @@
+
+.contenedor {
+    margin-top: 15px;
+    padding-left: 20px;
+    padding-right: 10px;
+}
+
+
+h2 {
+    color: #0077b6;
+}
+
+label {
+    margin: 8px 0px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width: 75%;
+}
+
+@media (max-width: 530px) { 
+    form {
+        width: 100%;
+    }
+}
+
+.enun {
+    display: flex;
+    justify-content: center;
+}
+
+input {
+    color: black;
+    margin-bottom: 7px;
+}
+
+.btn {
+    font-weight: bolder;
+    font-size: 17px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    letter-spacing: 3px;
+}

@@ -1,0 +1,16 @@
+
+@media (max-width: 1800px) {
+    .mobile {
+        display: none;
+    }
+}
+
+@media (max-width: 530px) {
+    .normal {
+        display: none;
+    }
+    .mobile {
+        display: flex;
+    }
+}
+

@@ -1,0 +1,106 @@
+
+.item {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    padding: 0px 20px 60px 40px;
+    height: 260px;
+    width: 50vw;
+}
+@media (min-width: 300px) { 
+    .item {
+        padding: 0px 10px 60px 10px
+    }
+}
+@media (min-width: 530px) { 
+    .item {
+        margin-right: 30px;
+        width: 28vw;
+    }
+}
+h6 {
+    color: #03045e;
+    margin: 0;
+    padding: 0px 0px 5px 0px;
+    /* margin-bottom: 5px; */
+}
+
+/* Genearl */
+/* h6 {
+    margin: 0px;
+    padding: 0px;
+} */
+
+.itemProd {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+
+.img {
+    /* object-fit: cover; */
+    /* max-height: 200px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.img img {
+    cursor: pointer;
+    object-fit: cover;
+    max-height: 130px;
+}
+
+.props {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.props .spanMsg {
+    margin: 0px;
+    padding: 0px;
+}
+
+.props, .img {  
+    max-height: 180px;
+}
+
+
+
+/* @media (min-width: 768px) { 
+    .img {
+        width: 190px;
+    }
+}
+@media (min-width: 1500px) { 
+    .img {
+        width: 250px;
+    }
+} */
+
+
+.btn {
+    width: 100%;
+}
+
+/* Info Product */
+.nameProduct {
+    color: #003566;
+}
+.dollar {
+    color: rgb(43, 232, 43);
+}
+
+.span {
+    color: #0077b6;
+    /* font-size: 18px; */
+}

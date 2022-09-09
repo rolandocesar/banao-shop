@@ -1,0 +1,43 @@
+
+.iconBack {
+    margin: 15px 0px 0px 10px;
+    /* width: fit-content; */
+}
+.iconBack i {
+    cursor: pointer;
+    color: #03045e;
+    font-size: 25px;
+}
+
+.contenedor {
+    margin-top: 15px;
+    padding-left: 20px;
+    padding-right: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    color: #023e8a;
+    margin-bottom: 5px;
+}
+
+input {
+    /* margin-bottom: 20px; */
+    width: 100%;
+}
+.field {
+    margin-bottom: 20px;
+}
+
+.divBtn {
+    display: flex;
+    justify-content: center;
+}
+button {
+    margin-top: 10px;
+    width: 75%;
+}

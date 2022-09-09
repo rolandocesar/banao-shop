@@ -1,0 +1,61 @@
+
+
+<div class="contenedor">
+
+    <header>
+        <div class="header">
+            <h1>Tienda  <span>Shop</span></h1>
+        </div>
+    </header>
+
+
+    <main>
+
+        <div class="divSearch">
+            <form  (ngSubmit)="search()" [formGroup]="myform" autocomplete="off" >
+                <div class="divInputIcon">
+                    <input type="text"
+                           formControlName="terminus"
+                           placeholder="Buscar Producto..."
+                    >
+                    <i class="bi bi-search icon" (click)="search()" ></i>
+                </div>
+                <span class="text text-danger"
+                      errDirectMsg
+                      [msg]="msg"
+                >
+                    
+                </span>
+            </form>
+
+            <div class="divCart">
+                <i class="bi bi-cart-dash-fill cart"
+                    (click)="goToCart()"
+                ></i>
+            </div>
+        </div>
+
+
+        <div  class="allProducts">
+            <div class="singleProduct"
+                 *ngFor="let product of products"
+            >
+                <app-single-product [product]="product" ></app-single-product>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <ul>
+            <li> <a routerLink="/footer/contactUs/">Contactarnos</a></li>
+            <li> <a routerLink="/footer/developer/">Desarrollador</a></li>
+            <li> <a routerLink="/footer/frecuent-questions/">Preguntas-Frecuentes</a></li>
+        </ul>
+        <div class="divCopyright">
+            <p>Copyright 2022 - All right reserved</p>
+        </div>
+    </footer>
+
+
+
+</div>

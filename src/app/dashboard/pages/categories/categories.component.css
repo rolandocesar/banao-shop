@@ -1,0 +1,107 @@
+
+.divCate {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+}
+
+.divCategory {
+    padding: 15px;
+}
+
+h1 {
+    color: #774936;
+    margin: 20px 0px 20px 10px;
+}
+h3 {
+    color: #9d6b53;
+    margin-left: 20px;
+}
+
+/* Search and Cart */
+.divSearch {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding: 0px 20px;
+}
+
+form .divInputIcon {
+    border: 1px solid #0077b6;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    padding-top: 2px 2px;
+    height: 40px;
+}
+form .divInputIcon input {
+    border: none;
+    padding: 0px 0px 0px 10px;
+    margin: 2px;
+}
+input[type=text]:focus {
+    outline: none;
+}
+
+.divSearch .icon {
+    cursor: pointer;
+    font-size: 30px;
+    padding: 0px 10px 0px 0px;
+}
+
+.cart {
+    cursor: pointer;
+    color: #0077b6;
+    font-size: 40px;
+}
+.cart:hover {
+    color: #03045e;
+}
+form .icon:hover, form .icon:active {
+    color: #a2d2ff;
+}
+/* Found Categories by Search Icon  */
+.divFoundCategories {
+    padding-left: 10px;
+}
+
+/* Carousel Cate */
+.carouselCate {
+    display: flex;
+    flex-direction: column ;
+    width: 100%;
+    /* overflow-x: hidden; */
+}
+.carouselCate span {
+    display: flex;
+    align-items: center;
+    font-size: 22px;
+    margin: 10px 0px 0px 40px;
+}
+.carouselCate i {
+    font-size: 30px;
+    margin-left: 8px;
+    padding-top: 5px;
+}
+.divUl {
+    display: flex;
+    align-items: center;
+    overflow: scroll;
+    width: auto;
+}
+
+.divUl::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+}
+
+.prodsBelongCate {
+    display: flex;
+    flex-wrap: wrap;
+}

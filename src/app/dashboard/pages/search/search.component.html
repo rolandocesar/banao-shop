@@ -1,0 +1,23 @@
+
+<div class="divContainerSearch">
+
+    <div class="header">
+        <h1>Busqueda</h1>
+        <i class="bi bi-cart-dash-fill cart"
+            (click)="goToCart()"
+        ></i>
+    </div>
+
+    <!-- <div class="divMain"
+         *ngIf="foundProdsFromSearch.length > 0"
+    > -->
+    <div class="founded">
+        <div class="divOneProd"
+             *ngFor="let prod of foundProdsFromSearch"
+        >
+            <app-single-product  [product]="prod" ></app-single-product>
+        </div>
+    </div>
+    <!-- </div> -->
+
+</div>

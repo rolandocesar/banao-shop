@@ -1,0 +1,47 @@
+
+
+
+
+    
+<form autocomplete="off" [formGroup]="myform" (ngSubmit)="login()">
+
+    <div class="enun">
+        <h2 >Login</h2>
+    </div>
+    
+    <!-- Email field -->
+    <h6>Email</h6>
+    <input type="email"
+           formControlName="email"
+           placeholder="Tu correo"
+    >
+    <span class="form-text text-danger"
+        *ngIf="validField('email')"
+    >email incorrecto</span>
+
+    <!-- Password field -->
+    <h6>Password</h6>
+    <input type="password"
+           formControlName="password"
+           placeholder="Contrasena"
+    >
+    <span class="form-text text-danger"
+        *ngIf="validField('password')"
+    >contrasena debe tener al menos 6 caracteres</span>
+
+    <button class="btn btn-primary"
+            [disabled]="myform.invalid"
+            type="submit"
+    >
+        Enviar
+    </button>
+
+    <div class="redirection">
+        <span>No tienes una cuenta ?</span>
+        <a [routerLink]="[ '/auth/register' ]">Crearme una cuenta</a>            
+    </div>
+
+            
+
+</form>
+    
